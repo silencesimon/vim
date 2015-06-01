@@ -1,7 +1,7 @@
 # My vim config
 
 ## vimrc
-including *.vimrc* and *.gimvrc*.
+including **.vimrc** and **.gimvrc**.
 
 ## vim plugins
-use vundle to manage plugins, so nice.
+use [vundle](https://github.com/gmarik/Vundle.vim) to manage plugins, so nice.
