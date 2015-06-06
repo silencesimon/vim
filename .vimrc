@@ -242,7 +242,7 @@ function RemoveTrailingWhitespace()
         " Remove trailing ^M
         " ^M is a visual representation of DOS/Windows line-ending character '\r'
         " You can also use :%s/^M//g
-        " To get , hold CTRL and press V then M
+        " To get ^M, hold CTRL and press V then M
         silent! %s/$//g
 
         call cursor(b:curline, b:curcol)
