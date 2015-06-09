@@ -42,7 +42,7 @@ set incsearch
 
 " This turns on C style indentation. Each new line will be automatically
 " indented the correct amount according to the C indentation standard.
-set cindent
+"set cindent
 
 " Setup the colors for syntax highlighting. (syntax enable)
 syntax on
@@ -50,13 +50,6 @@ syntax on
 " when on, enable file type detection.
 " turn this off, required by vundle.
 filetype off
-
-" You can enable loading the indent file for specific file types.
-filetype indent on
-" You can enable loading the plugin files for specific file types.
-filetype plugin on
-filetype plugin indent on
-
 
 " ###############################################
 " Vundle
@@ -87,6 +80,12 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'tomasr/molokai'
 " ###############################################
 
+
+" You can enable loading the indent file for specific file types.
+"filetype indent on
+" You can enable loading the plugin files for specific file types.
+"filetype plugin on
+filetype plugin indent on
 
 
 " set number of colors.
@@ -191,6 +190,10 @@ set noerrorbells
 " clipboard. (works in OSX, Windows)
 set clipboard+=unnamed
 
+" set mapleader key
+let mapleader = ","
+
+
 " copy to system clipboard.
 map <leader>y "+y
 " paste from system clipboard.
@@ -280,7 +283,7 @@ function! VisualSelection_ack(direction) range
     let l:pattern = substitute(l:pattern, "\n$", "", "")
 
     if a:direction == 'ga' || a:direction == 'gv'
-        execute "Ack " . "\"" . l:pattern . "\""
+        execute "Ack! " . "\"" . l:pattern . "\""
     endif
 
     let @/ = l:pattern
@@ -301,7 +304,6 @@ vnoremap <silent> ga :call VisualSelection_ack('ga')<CR>
 " Plugin config
 " ###############################################
 
-let mapleader = ","
 
 " BufExplorer
 nnoremap <leader>be :BufExplorer<CR>
