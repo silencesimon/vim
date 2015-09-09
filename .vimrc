@@ -68,7 +68,6 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'Mark--Karkat'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'tpope/vim-surround'
-Bundle 'zhisheng/visualmark.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'L9'
 Bundle 'tpope/vim-repeat'
@@ -330,7 +329,7 @@ nnoremap <leader>ft :FufTag<CR>
 
 " ctags setting
 set tags=tags
-map <F9> <Esc>:!ctags **/*<CR>
+map <F9> <Esc>:!ctags -R *<CR>
 
 
 
