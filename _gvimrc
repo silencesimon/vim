@@ -1,0 +1,29 @@
+set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI
+
+" max window when starting up
+"au GUIEnter * simalt ~x
+set columns=100 lines=50
+
+if has("gui_running")
+    set encoding=utf-8
+    set fileencodings=utf-8,chinese,latin-1
+
+    if has("win32")
+        set fileencoding=chinese
+    else
+        set fileencoding=utf-8
+    endif
+
+    let &termencoding=&encoding
+
+    "解决菜单乱码
+    source $VIMRUNTIME/delmenu.vim
+    source $VIMRUNTIME/menu.vim
+
+    "解决console输出乱码
+    language messages zh_CN.utf-8
+
+    "Vim 方便地进行中文输入和命令模式切换
+    "set imactivatekey=C-space
+    "inoremap <ESC> <ESC>:set iminsert=0<CR>
+endif
