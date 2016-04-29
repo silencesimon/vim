@@ -55,28 +55,32 @@ filetype off
 " Vundle
 " ###############################################
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
-Bundle 'fatih/vim-go'
-Bundle 'FuzzyFinder'
-Bundle 'bufexplorer.zip'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'Mark--Karkat'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'tpope/vim-surround'
-Bundle 'mileszs/ack.vim'
-Bundle 'L9'
-Bundle 'tpope/vim-repeat'
-Bundle 'majutsushi/tagbar'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'Lokaltog/vim-easymotion'
+Plugin 'fatih/vim-go'
+Plugin 'FuzzyFinder'
+Plugin 'bufexplorer.zip'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'Mark--Karkat'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'tpope/vim-surround'
+Plugin 'mileszs/ack.vim'
+Plugin 'L9'
+Plugin 'tpope/vim-repeat'
+Plugin 'majutsushi/tagbar'
+"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Lokaltog/vim-easymotion'
 
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'tomasr/molokai'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tomasr/molokai'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
 " ###############################################
 
 
