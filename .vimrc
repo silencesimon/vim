@@ -144,7 +144,9 @@ set ff=unix
 " automatically detect which file format should be used to read a file). The
 " first file format in 'fileformats' is also used as the default for a new
 " buffer.
-set ffs=unix
+" comment to hide ^M symbol
+"set ffs=unix
+
 " The following command displays the fileformat option (abbreviated as ff) for
 " the current buffer, and the fileformats global option (abbreviated as ffs)
 " which determines how Vim reads and writes files
@@ -243,13 +245,13 @@ function RemoveTrailingWhitespace()
         silent! %s/\s\+$//
 
         " To change all the existing tab characters to match the current tab settings.
-        silent! retab!
+        "silent! retab!
 
         " Remove trailing ^M
         " ^M is a visual representation of DOS/Windows line-ending character '\r'
         " You can also use :%s/^M//g
         " To get ^M, hold CTRL and press V then M
-        silent! %s/$//g
+        "silent! %s/$//g
 
         call cursor(b:curline, b:curcol)
     endif
