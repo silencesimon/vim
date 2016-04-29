@@ -1,0 +1,36 @@
+[user]
+	email = silence.simon@gmail.com
+	name = silencesimon
+[core]
+	editor = vim
+[color]
+	ui = true
+[alias]
+	st = status -sb
+	co = checkout
+    cl = clone
+	ci = commit
+	br = branch
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
+    dt = difftool
+    mt = mergetool
+    last = log -1 --stat
+    unstage = reset HEAD --
+    dc = diff --cached
+
+[diff]
+	tool = bc3
+[difftool "bc3"]
+    cmd = \"C:/Program Files (x86)/Beyond Compare 3/BCompare.exe\" \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+
+[merge]
+    tool = bc3
+[mergetool "bc3"]
+    cmd = \"C:/Program Files (x86)/Beyond Compare 3/BCompare.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+[mergetool]
+    prompt = false
+    keeptemporaries = false
+    keepbackups = false
+    trustexitcode = false
