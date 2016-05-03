@@ -411,3 +411,5 @@ let g:ycm_key_invoke_completion = '<C-X>'
 let g:ackprg = 'ag --vimgrep -Q'
 let g:ackhighlight = 1
 " ###############################################
+
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
