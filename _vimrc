@@ -422,22 +422,26 @@ let g:ackhighlight = 1
 " ###############################################
 " vim-airline
 " ###############################################
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 let g:airline_theme="solarized"
 let g:airline#extensions#wordcount#enabled = 0
+let g:airline#extensions#tagbar#enabled = 0
+let g:airline#extensions#whitespace#enabled = 0
 
 " consolas powerline font"
 "set guifont=Consolas\ for\ Powerline\ FixedD:h10
-set guifont=Consolas_for_Powerline_FixedD:h10
+"set guifont=Consolas_for_Powerline_FixedD:h10
+"set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI
+set guifont=Monaco:h9:cANSI
 
 "statusline symbols"
-let g:Powerline_symbols="fancy"
-let g:airline_symbols = {}
-let g:airline_left_sep = "\u2b80"
-let g:airline_left_alt_sep = "\u2b81"
-let g:airline_right_sep = "\u2b82"
-let g:airline_right_alt_sep = "\u2b83"
-let g:airline_symbols.branch = "\u2b60"
-let g:airline_symbols.readonly = "\u2b64"
-let g:airline_symbols.linenr = "\u2b61"
+"let g:Powerline_symbols="fancy"
+"let g:airline_symbols = {}
+"let g:airline_left_sep = "\u2b80"
+"let g:airline_left_alt_sep = "\u2b81"
+"let g:airline_right_sep = "\u2b82"
+"let g:airline_right_alt_sep = "\u2b83"
+"let g:airline_symbols.branch = "\u2b60"
+"let g:airline_symbols.readonly = "\u2b64"
+"let g:airline_symbols.linenr = "\u2b61"
 " ###############################################
