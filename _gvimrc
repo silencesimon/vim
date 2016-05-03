@@ -1,4 +1,5 @@
-set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI
+"because of vim-airline font settings
+"set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI
 
 " max window when starting up
 "au GUIEnter * simalt ~x

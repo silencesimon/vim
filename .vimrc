@@ -79,6 +79,9 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
 
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " ###############################################
@@ -272,7 +275,7 @@ function! VisualSelection(direction) range
     elseif a:direction == 'f'
         execute "normal /" . l:pattern . ""
     elseif a:direction == 'gv'
-        execute "noautocmd vimgrep " . "/" . l:pattern . "/gj" . " **/*.c **/*.h"
+        execute "noautocmd vimgrep " . "/" . l:pattern . "/gj" . " **/*"
         execute "cw"
     endif
 
@@ -413,3 +416,14 @@ let g:ackhighlight = 1
 " ###############################################
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+
+" ###############################################
+" vim-airline
+" ###############################################
+"let g:airline_powerline_fonts = 1
+"let g:airline_theme="solarized"
+let g:airline#extensions#wordcount#enabled = 0
+
+"set guifont=DejaVu_Sans_Mono_for_Powerline_FixedD:h10
+" ###############################################
