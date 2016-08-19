@@ -17,6 +17,9 @@
     last = log -1 --stat
     unstage = reset HEAD --
     dc = diff --cached
+    bl = blame
+    pl = pull --rebase
+    so = show --stat
 
 [diff]
 	tool = bc3

@@ -271,9 +271,9 @@ function! VisualSelection(direction) range
     let l:pattern = substitute(l:pattern, "\n$", "", "")
 
     if a:direction == 'b'
-        execute "normal ?" . l:pattern . ""
+        execute "normal ?" . l:pattern . """
     elseif a:direction == 'f'
-        execute "normal /" . l:pattern . ""
+        execute "normal /" . l:pattern . """
     elseif a:direction == 'gv'
         execute "noautocmd vimgrep " . "/" . l:pattern . "/gj" . " **/*"
         execute "cw"
